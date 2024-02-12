@@ -1,0 +1,5 @@
+export const constants = {
+  ADD_DIALOG: "ADD_DIALOG",
+  EDIT_DIALOG: "EDIT_DIALOG",
+  DELETE_DIALOG: "DELETE_DIALOG",
+};
