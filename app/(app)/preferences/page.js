@@ -9,7 +9,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/UI/form";
+} from "@/components/UI/Form";
 import { Checkbox } from "@/components/UI/Checkbox";
 import usePreferencesState from "./usePreferencesState";
 
