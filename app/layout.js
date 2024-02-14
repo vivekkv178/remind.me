@@ -6,6 +6,7 @@ import StoreProvider from "@/components/StoreProvider";
 import UserProvider from "@/components/UserProvider";
 import MadeWith from "@/components/UI/Madewith";
 import "react-toastify/dist/ReactToastify.css";
+import "@vivekkv178/library/dist/style.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
