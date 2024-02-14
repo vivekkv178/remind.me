@@ -4,24 +4,24 @@ import { Home, Users, CalendarCheck, Settings2 } from "lucide-react";
 
 const routes = [
   {
-    name: "Home",
+    title: "Home",
     path: FE_ROUTES.HOME,
-    icon: <Home />,
+    icon: <Home className="h-6 w-6" />,
   },
   {
-    name: "Manage Contacts",
+    title: "Manage Contacts",
     path: FE_ROUTES.CONTACTS,
-    icon: <Users />,
+    icon: <Users className="h-6 w-6" />,
   },
   {
-    name: "Manage Events",
+    title: "Manage Events",
     path: FE_ROUTES.EVENTS,
-    icon: <CalendarCheck />,
+    icon: <CalendarCheck className="h-6 w-6" />,
   },
   {
-    name: "Preferences",
+    title: "Preferences",
     path: FE_ROUTES.PREFERENCES,
-    icon: <Settings2 />,
+    icon: <Settings2 className="h-6 w-6" />,
   },
 ];
 
