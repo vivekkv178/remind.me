@@ -36,6 +36,7 @@ const triggerRemindersService = () => {
       FIRESTORE_COLLECTIONS.EVENTS
     );
     events.forEach(async (event) => {
+      console.log(event);
       if (checkTrigger(event))
         if (event.contact_id) {
           const contactDetails = await getContactDetails(event);
