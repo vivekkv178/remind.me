@@ -190,7 +190,7 @@ const useEventsState = () => {
 
   const notficationsHandler = () => {
     axios
-      .post(API_ENDPOINTS.TRIGGER_REMINDERS, {})
+      .get(API_ENDPOINTS.TRIGGER_REMINDERS, {})
       .then(function (response) {
         toast({
           title: response.data.message,
