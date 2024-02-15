@@ -1,7 +1,7 @@
 import triggerRemindersService from "./service";
 import { NextResponse } from "next/server";
 
-export async function GET(req, res) {
+export async function POST(req, res) {
   try {
     console.log("Request start");
     const response = await triggerRemindersService();
