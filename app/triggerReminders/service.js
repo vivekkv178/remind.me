@@ -36,9 +36,8 @@ const triggerRemindersService = () => {
       FIRESTORE_COLLECTIONS.EVENTS
     );
     events.forEach(async (event) => {
-      console.log("Request event--------->", event);
-
-      if (checkTrigger(event))
+      if (checkTrigger(event)) {
+        console.log("Triggering Notification for event : ", event.doc_id);
         if (event.contact_id) {
           const contactDetails = await getContactDetails(event);
           await triggerNotification({
@@ -62,6 +61,7 @@ const triggerRemindersService = () => {
             username: event?.user_email?.split("@")[0],
           });
         }
+      }
     });
     resolve("Success");
   });
