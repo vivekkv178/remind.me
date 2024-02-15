@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic"; // static by default, unless reading the
 export async function GET(req, res) {
   try {
     console.log("Request start");
-    // const response = await triggerRemindersService();
+    const response = await triggerRemindersService();
     return new Response(`Success`);
   } catch (error) {
     return new Response(`Fail`);
