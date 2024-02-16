@@ -40,6 +40,17 @@ const triggerRemindersService = () => {
         console.log("Triggering Notification for event : ", event.doc_id);
         if (event.contact_id) {
           const contactDetails = await getContactDetails(event);
+          console.log("Params : ", {
+            notificationEmail: event.user_email,
+            subject: `${contactDetails?.name} - ${event.event_name}`,
+            eventDescription: `${contactDetails?.name} - ${event.event_name}`,
+            whatsappNumber: contactDetails?.phone?.replaceAll("+", ""),
+            whatsappText: messages[event.event_type].replaceAll(
+              "{{name}}",
+              contactDetails?.name
+            ),
+            username: event?.user_email?.split("@")[0],
+          });
           await triggerNotification({
             notificationEmail: event.user_email,
             subject: `${contactDetails?.name} - ${event.event_name}`,
